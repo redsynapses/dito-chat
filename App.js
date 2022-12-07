@@ -16,7 +16,6 @@ const conversationBuilder = TalkRn.getConversationBuilder(conversationId);
 
 conversationBuilder.setParticipant(ME);
 conversationBuilder.setParticipant(OTHER);
-conversationBuilder.setAttributes({ subject: 'Random conversation' });
 
 const Tab = createBottomTabNavigator();
 
@@ -39,14 +38,12 @@ const screenOptions = ({ route }) => ({
   headerShown: false,
 })
 
-function MyTabs() {
-  return (
-    <Tab.Navigator screenOptions={screenOptions}>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Chat" component={ChatStackScreen} />
-    </Tab.Navigator>
-  );
-}
+const MyTabs = () => (
+  <Tab.Navigator screenOptions={screenOptions}>
+    <Tab.Screen name="Home" component={HomeScreen} />
+    <Tab.Screen name="Chat" component={ChatStackScreen} />
+  </Tab.Navigator>
+);
 
 export default function App() {
   return (

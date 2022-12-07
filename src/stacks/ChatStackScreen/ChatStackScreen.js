@@ -1,6 +1,6 @@
 import React from "react";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import {ConversationList, Chatbox} from "../../components";
+import {ConversationList, Chatbox} from "../../screens";
 
 const Stack = createNativeStackNavigator();
 

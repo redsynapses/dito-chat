@@ -5,6 +5,7 @@ const axios = Axios.create({
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
+    // TODO: need to add the Secret key (for calling the REST API), for example - 'Bearer sk_test_sq'
     Authorization: 'Bearer '
   },
   responseType: 'json',

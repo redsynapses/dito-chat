@@ -2,9 +2,9 @@ import {View} from "react-native";
 import * as TalkRn from "@talkjs/expo";
 import {APP_ID, ME} from "../../constants/apiData";
 
-export default function ConversationList(props) {
+export default function ConversationList({ navigation }) {
   const onSelectConversation = event => {
-    props.navigation.navigate('Chatbox', {
+    navigation.navigate('Chatbox', {
       conversationBuilder: event.conversation,
       name: event.others[0].name
     });

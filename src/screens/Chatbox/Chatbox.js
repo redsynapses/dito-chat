@@ -12,7 +12,7 @@ export default function Chatbox({ navigation, route }) {
 
   useEffect(() => {
     navigation.setOptions({
-      title: name === '' ? 'Chat' : name,
+      title: name || 'Chat',
     });
   }, [navigation, name]);
 
